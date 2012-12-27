@@ -5,10 +5,10 @@ backpack.BoxPacker = Backbone.Model.extend({
 		minBoxHeight: 50,
 		maxBoxHeight: 100,
 		boxCount: 100,
-		// packAlgorithm: "FCNR",
-		// boxType: "random",
-		packAlgorithm: "OF",
-		boxType: "rectangle",
+		packAlgorithm: "FCNR",
+		boxType: "random",
+		// packAlgorithm: "OF",
+		// boxType: "rectangle",
 		_levelOF: 0
 	},
 
