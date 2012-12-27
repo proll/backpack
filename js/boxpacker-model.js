@@ -5,8 +5,10 @@ backpack.BoxPacker = Backbone.Model.extend({
 		minBoxHeight: 50,
 		maxBoxHeight: 100,
 		boxCount: 100,
-		packAlgorithm: "FCNR",
-		boxType: "random",
+		// packAlgorithm: "FCNR",
+		// boxType: "random",
+		packAlgorithm: "OF",
+		boxType: "rectangle",
 		_levelOF: 0
 	},
 
@@ -424,6 +426,12 @@ backpack.BoxPacker = Backbone.Model.extend({
 						emptyAreasArr.push(newAreaRect);
 						emptyAreasArr[fitInd].adjust(0, 0, 0, -rects[ind].get("height"));
 					}
+					// SCORE: packing
+					if(packed) {
+						// console.log(rects[ind].view.$el);
+						rects[ind].view.$el.css({"transition-delay": "0."+ind+"s"});
+						rects[ind].position(packedArr[packedArr.length - 1]);
+					}
 					continue;
 				}
 			}
@@ -488,12 +496,10 @@ backpack.BoxPacker = Backbone.Model.extend({
 
 			// SCORE: packing
 			if(packed) {
-				// console.log(rects[ind].view.$el);
 				rects[ind].view.$el.css({"transition-delay": "0."+ind+"s"});
 				rects[ind].position(packedArr[packedArr.length - 1]);
 			}
 		}
-
 		return packedArr;
 	},
 

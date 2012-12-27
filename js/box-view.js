@@ -1,3 +1,4 @@
+var cnt = 0;
 backpack.BoxView = Backbone.View.extend({
 	tagName: 		"div",
 	className: 		"box",
