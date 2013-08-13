@@ -3,7 +3,7 @@
 We have many rectangle boxes. We can't rotate them as a condition. And finally we have to place each box to a most suitable free place in the backpack.
 There are many algorithms. I only implement some. When we know every box and have to pack them all we can use offline algorithms. When we know only part of all boxes (like in Tetris game) we can use online algorithms.
 
-[Demopage](http://46.17.40.10/backpack/)
+[Demopage](http://edemvkino.ru/backpack/)
 
 Offline - Floor Сeiling No Rotation (FCNR)
 --------------
